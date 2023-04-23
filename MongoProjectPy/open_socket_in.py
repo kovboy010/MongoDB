@@ -4,7 +4,7 @@ import cdb
 #Открытие сокета приема
 sockin = socket.socket()
 sockin.bind(('', 1111))
-sockin.listen(1)
+sockin.listen()
 print("socket_in created.")
 connin, addrin = sockin.accept()
 print("connected", addrin)

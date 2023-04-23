@@ -1,7 +1,6 @@
-import open_socket_in
+import open_socket_out
 
-open_socket_in.write()
-
+open_socket_out.read()
 
 
 

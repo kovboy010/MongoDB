@@ -11,6 +11,7 @@ while True:
         break
         sock.close()
     sock.send(inp.encode('utf-8'))
+    #data = ''
     data = sock.recv(1024)
     deserialezed = pickle.loads(data)
     for i in range(len(deserialezed)):

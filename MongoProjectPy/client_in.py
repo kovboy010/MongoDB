@@ -9,6 +9,6 @@ while True:
     if inp == 'exit':
         break
         sock.close()
-    sock.send(inp.encode('utf-8'))
+    sock.send(str(inp.encode('utf-8')))
     data = sock.recv(1024)
     print (data)
