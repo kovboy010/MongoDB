@@ -2,28 +2,31 @@ import pymongo
 import socket
 from pymongo import MongoClient
 
+#Соединение с базой данных
 client = MongoClient('localhost', 27017)
 db = client['project']
 coll = db['first']
 
+#Открытие сокета приема
 sock = socket.socket()
 sock.bind(('', 1111))
 sock.listen(1)
+print("socket created.")
 conn, addr = sock.accept()
 print("connected", addr)
 
+#Прием и запись данных в базу даннных
 while True:
-   data1 = conn.recv(64)
-   check1 = data1.decode('utf-8')
-   if check1 != '':
-      data2 = check1
-   data = {"massage": data2}
-   print("ПОЛУЧИЛИ В data: ", data)
-   if data2 != check1:
+   data1 = conn.recv(1024)
+   check = data1.decode('utf-8')
+   if check != '':
+      data2 = check
+      data = {"massage": data2}
+      print("ПОЛУЧИЛИ В data: ", data2)
       res = coll.insert_one(data)
+      conn.send(data1.upper())
    if not data1:
       break
-   conn.send(data1.upper())
 conn.close()
 print("socket close")
 
