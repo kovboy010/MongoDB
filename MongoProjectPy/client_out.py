@@ -1,7 +1,8 @@
 import socket
+import pickle
 
 sock = socket.socket()
-sock.connect(('localhost', 1111))
+sock.connect(('localhost', 1112))
 print("connected with srever.")
 while True:
     inp = input()
@@ -11,6 +12,6 @@ while True:
         sock.close()
     sock.send(inp.encode('utf-8'))
     data = sock.recv(1024)
-
-
-print (data)
+    deserialezed = pickle.loads(data)
+    for i in range(len(deserialezed)):
+        print(deserialezed[i])
