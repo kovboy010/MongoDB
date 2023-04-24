@@ -20,3 +20,13 @@
 
 
 референс для содания сокета: https://github.com/TiagoValdrich/python-socket-chat/blob/master/server.py
+
+Статьи:
+
+стр.1057: https://elibrary.ru/download/elibrary_49273592_71600015.pdf
+
+стр.68: https://research-journal.org/wp-content/uploads/2011/10/5-1-24.pdf
+
+контекстуально тоже подходит (как подтверждение актуальности задачи): https://elibrary.ru/item.asp?id=49617827
+
+хранение разнородных данных (подходы): https://elibrary.ru/item.asp?id=42490745
