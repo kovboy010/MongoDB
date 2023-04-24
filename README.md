@@ -17,3 +17,6 @@
 Независимая масштабируемость — каждый сервис может быть масштабирован независимо от остального приложения.
 
 статья с теорией и ссылками: https://habr.com/ru/companies/vk/articles/320962/
+
+
+референс для содания сокета: https://github.com/TiagoValdrich/python-socket-chat/blob/master/server.py
