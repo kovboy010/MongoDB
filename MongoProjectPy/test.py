@@ -1,7 +1,9 @@
-import open_socket_out
+import cdb
+import open_socket_in
 
-open_socket_out.read()
 
+#cdb.start_base()
+open_socket_in.op_sock_in()
 
 
 
