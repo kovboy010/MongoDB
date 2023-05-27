@@ -1,6 +1,6 @@
 import socket
 
-# Подключение клиента ввода
+# Подключение клиента для проверки работоспособностей модулей и команд.
 sock = socket.socket()
 sock.connect(('localhost', 1112))
 print("connected with srever.")

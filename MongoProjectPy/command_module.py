@@ -1,4 +1,4 @@
-import open_socket_in
+import open_socket
 import cdb
 import pickle
 from pymongo import MongoClient
@@ -52,11 +52,11 @@ def read(inp):
         return(print("Данных не найдено!"))
     if mass != []:
         print("я здесь 3")
-        return open_socket_in.send(pickle.dumps(mass))
+        return open_socket.send(pickle.dumps(mass))
 
 
 def disconnect():
-    open_socket_in.op_sock_in().conn.close()
+    open_socket.op_sock_in().conn.close()
 
 
 
