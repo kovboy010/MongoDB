@@ -33,7 +33,7 @@ def presort():
                 return re
 
 
-# Распределение и запись данных а БД.
+# Распределение и запись данных в БД.
 def separation_put():
     mass = presort()
     acceleration_x = mass[0:7]
